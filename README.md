@@ -12,22 +12,11 @@ Plugin de Claude Code que orquesta agentes especializados para desarrollo de sof
 
 ```bash
 # 1. Agregar el marketplace (una sola vez)
-claude plugin marketplace add AlvaroEng98/ClaudeHarness
+/plugin marketplace add AlvaroEng98/ClaudeHarness
 
 # 2. Instalar el plugin
-claude plugin install harness-agents@alvaroeng
+/plugin install harness-agents@alvaroeng
 ```
-
-<details>
-<summary>Instalación local (desarrollo)</summary>
-
-```bash
-git clone https://github.com/AlvaroEng98/ClaudeHarness
-cd ClaudeHarness
-claude plugin install .
-```
-
-</details>
 
 ## Inicio rápido
 
