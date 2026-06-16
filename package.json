@@ -1,0 +1,23 @@
+{
+  "name": "harness-agents",
+  "version": "1.0.0",
+  "description": "Harness de agentes especializados para Claude Code: planificador, constructor y revisores paralelos.",
+  "author": "AlvaroEng98",
+  "license": "MIT",
+  "files": [
+    ".claude-plugin/",
+    "agents/",
+    "commands/",
+    "skills/",
+    "docs/",
+    "CLAUDE.md",
+    "README.md"
+  ],
+  "keywords": [
+    "claude-code",
+    "claude-plugin",
+    "agents",
+    "harness",
+    "development"
+  ]
+}

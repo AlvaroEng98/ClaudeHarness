@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "alvaroeng",
+  "description": "Plugins de desarrollo para Claude Code por AlvaroEng98.",
+  "owner": {
+    "name": "AlvaroEng98",
+    "url": "https://github.com/AlvaroEng98"
+  },
+  "plugins": [
+    {
+      "name": "harness-agents",
+      "description": "Harness de agentes especializados: planificador, constructor y revisores paralelos (seguridad, performance, calidad). Flujos Consulta / Express / Completo con gates de aprobación.",
+      "source": "./",
+      "category": "development"
+    }
+  ]
+}

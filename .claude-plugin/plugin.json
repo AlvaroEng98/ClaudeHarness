@@ -1,0 +1,8 @@
+{
+  "name": "harness-agents",
+  "description": "Harness de agentes especializados para Claude Code. Orquesta flujos Consulta / Express / Completo con agentes de planificación, construcción y revisión paralela (seguridad, performance, calidad).",
+  "author": {
+    "name": "AlvaroEng98",
+    "url": "https://github.com/AlvaroEng98"
+  }
+}
