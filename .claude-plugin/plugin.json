@@ -1,5 +1,6 @@
 {
   "name": "harness-agents",
+  "version": "1.0.0",
   "description": "Harness de agentes especializados para Claude Code. Orquesta flujos Consulta / Express / Completo con agentes de planificación, construcción y revisión paralela (seguridad, performance, calidad).",
   "author": {
     "name": "AlvaroEng98",

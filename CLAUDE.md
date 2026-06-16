@@ -55,9 +55,9 @@ Nunca escalar silenciosamente. Siempre notificar al Desarrollador antes de cambi
 
 | Condición | Agente |
 |-----------|--------|
-| Task pendiente en Plans.md | Constructor (`/work`) |
-| Cambios en 2+ archivos no triviales | Revisor (`/harness-review`) |
-| Nueva feature o módulo | Planificador (`/plan-with-agent`) |
+| Task pendiente en Plans.md | Constructor (`/harness-agents:work`) |
+| Cambios en 2+ archivos no triviales | Revisor (`/harness-agents:harness-review`) |
+| Nueva feature o módulo | Planificador (`/harness-agents:plan-with-agent`) |
 | Commit o PR listo para merge | Revisor (obligatorio) |
 | Bug de seguridad detectado | Revisor-Seguridad aislado |
 
@@ -75,13 +75,13 @@ No persistir artefactos.
 
 1. Confirmar el problema y los archivos afectados con el Desarrollador. **[GATE]**
 2. Invocar `constructor` con la descripción exacta del fix.
-3. Invocar `revisor` (`/harness-review`) sobre los archivos modificados.
+3. Invocar `revisor` (`/harness-agents:harness-review`) sobre los archivos modificados.
 4. Si Revisor emite BLOQUEADO → crear task de corrección e invocar `constructor` de nuevo.
 
 ## Flujo Completo
 
-1. Invocar `planificador` (`/plan-with-agent`) → genera `spec.md` y `Plans.md`.
+1. Invocar `planificador` (`/harness-agents:plan-with-agent`) → genera `spec.md` y `Plans.md`.
 2. Presentar `Plans.md` al Desarrollador para aprobación. **[GATE 1]**
-3. Por cada task en `Plans.md`: invocar `constructor` (`/work`).
-4. Invocar `revisor` (`/harness-review`) sobre todos los cambios. **[GATE 2]**
+3. Por cada task en `Plans.md`: invocar `constructor` (`/harness-agents:work`).
+4. Invocar `revisor` (`/harness-agents:harness-review`) sobre todos los cambios. **[GATE 2]**
 5. Si Revisor emite BLOQUEADO → agregar tasks de corrección a `Plans.md` y volver al paso 3.

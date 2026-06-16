@@ -13,16 +13,16 @@ claude plugin install .
 | Flujo | Cuándo usarlo | Comandos |
 |-------|---------------|----------|
 | **Consulta** | Preguntas, exploración de código | (respuesta directa) |
-| **Express** | Bugfix acotado, ≤3 archivos, causa obvia | `/work` + `/harness-review` |
-| **Completo** | Features, refactoring, decisiones de diseño | `/plan-with-agent` → `/work` → `/harness-review` |
+| **Express** | Bugfix acotado, ≤3 archivos, causa obvia | `/harness-agents:work` + `/harness-agents:harness-review` |
+| **Completo** | Features, refactoring, decisiones de diseño | `/harness-agents:plan-with-agent` → `/harness-agents:work` → `/harness-agents:harness-review` |
 
 ## Comandos
 
 | Comando | Descripción |
 |---------|-------------|
-| `/plan-with-agent` | Genera `spec.md` y `Plans.md` con el Planificador |
-| `/work` | Ejecuta el siguiente task pendiente de `Plans.md` con el Constructor |
-| `/harness-review` | Revisión paralela de seguridad, performance y calidad |
+| `/harness-agents:plan-with-agent` | Genera `spec.md` y `Plans.md` con el Planificador |
+| `/harness-agents:work` | Ejecuta el siguiente task pendiente de `Plans.md` con el Constructor |
+| `/harness-agents:harness-review` | Revisión paralela de seguridad, performance y calidad |
 
 ## Agentes
 
