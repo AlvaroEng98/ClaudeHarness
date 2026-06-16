@@ -8,7 +8,7 @@ disallowedTools:
   - Edit
   - Bash
   - Agent
-model: Haiku 4.5
+model: claude-haiku-4-5
 maxTurns: 20
 color: orange
 ---

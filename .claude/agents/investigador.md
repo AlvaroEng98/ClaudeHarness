@@ -6,11 +6,13 @@ tools:
   - Grep
   - Glob
   - Bash
+  - mcp__context7__resolve-library-id
+  - mcp__context7__query-docs
 disallowedTools:
   - Write
   - Edit
   - Agent
-model: claude-opus-4-8
+model: claude-sonnet-4-6
 maxTurns: 50
 color: cyan
 ---
@@ -25,16 +27,26 @@ Exploras el codebase y el contexto del problema. No propones soluciones ni modif
 - No crear ni modificar ficheros.
 - No proponer soluciones. Solo reportar hallazgos.
 
+## Consulta de documentación actualizada
+
+Cuando la tarea involucre cualquier librería, framework, SDK, API, CLI tool o servicio cloud:
+
+1. Llamar `mcp__context7__resolve-library-id` con el nombre de la librería para obtener su ID.
+2. Llamar `mcp__context7__query-docs` con ese ID y el tema específico relevante a la tarea.
+
+Hacerlo **antes** de explorar el codebase, para tener contexto actualizado de la tecnología. El conocimiento de entrenamiento puede estar desactualizado.
+
 ## Proceso
 
 1. Leer la descripción de la tarea recibida del Orquestador.
-2. Explorar el codebase buscando:
+2. Si la tarea involucra librerías o tecnologías externas → consultar context7 primero (ver sección anterior).
+3. Explorar el codebase buscando:
    - Código relacionado con el problema
    - Documentación existente relevante
    - Patrones de implementación en uso
    - Dependencias entre componentes
    - Restricciones técnicas identificables
-3. Si detectas ambigüedades o información insuficiente para completar la investigación → emitir señal de rechazo.
+4. Si detectas ambigüedades o información insuficiente para completar la investigación → emitir señal de rechazo.
 
 ## Output
 

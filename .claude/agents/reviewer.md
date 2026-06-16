@@ -10,7 +10,7 @@ disallowedTools:
   - Edit
   - Bash
   - Agent
-model: claude-opus-4-8
+model: claude-sonnet-4-6
 maxTurns: 30
 color: blue
 ---
